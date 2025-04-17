@@ -32,7 +32,7 @@ const defaultPreferences: Preferences = {
   },
   copyright: {
     companyName: 'Simple Admin',
-    companySiteLink: 'https://doc.ryansu.tech/zh/',
+    companySiteLink: 'https://doc.gumingdongsu.tech/zh/',
     date: '2024',
     enable: true,
     icp: '',

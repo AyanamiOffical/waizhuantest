@@ -32,13 +32,13 @@ async function viteLicensePlugin(
         const copyrightText = `/*!
   * Simple Admin
   * Version: ${version}
-  * Author: Ryan SU
+  * Author: gumingdong SU
   * Copyright (C) 2024 Simple Admin
   * License: Apache2.0 License
   * Description: ${description}
   * Date Created: ${date}
   * Homepage: ${homepage}
-  * Contact: yuansu.china.work@gmail.com
+  * Contact: gumingdong.china.work@gmail.com
 */
               `.trim();
 

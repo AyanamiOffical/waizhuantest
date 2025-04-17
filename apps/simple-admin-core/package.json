@@ -1,7 +1,7 @@
 {
   "name": "@vben/simple-admin-core",
   "version": "1.6.6",
-  "homepage": "https://doc.ryansu.tech/",
+  "homepage": "https://doc.gumingdongsu.tech/",
   "bugs": "https://github.com/suyuan32/simple-admin-vben5-ui/issues",
   "repository": {
     "type": "git",
@@ -10,8 +10,8 @@
   },
   "license": "Apache-2.0",
   "author": {
-    "name": "Ryan SU",
-    "email": "yuansu.china.work@gmail.com",
+    "name": "gumingdong SU",
+    "email": "gumingdong.china.work@gmail.com",
     "url": "https://github.com/suyuan32"
   },
   "type": "module",

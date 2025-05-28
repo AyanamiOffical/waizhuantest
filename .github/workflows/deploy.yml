@@ -1,40 +1,55 @@
-name: Deploy
+name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
-  workflow_dispatch:
+    branches:
+      - main # 或者您希望触发部署的分支
 
 jobs:
-  deploy:
-    name: Deploy
+  build-and-deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 9 # 根据您的 package.json 指定 pnpm 版本
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version-file: '.node-version' # 读取 .node-version 文件中的版本
           cache: 'pnpm'
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 9
-          run_install: false
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
       - name: Build
         run: pnpm run build:simple-admin-core
+        working-directory: ./apps/simple-admin-core # 指定工作目录
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./apps/simple-admin-core/dist
-          publish_branch: gh-pages 
+          publish_dir: ./apps/simple-admin-core/dist # Vite 构建的默认输出目录通常是 dist
+          publish_branch: gh-pages # 部署到 gh-pages 分支
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          # 如果您的目标仓库是 https://github.com/AyanamiOffical/waizhuantest.git
+          # 您需要设置 external_repository 选项
+          external_repository: AyanamiOffical/waizhuantest.git
+          # 您还需要一个 Personal Access Token (PAT) 具有 repo 权限，并将其存储在源仓库的 Secrets 中，例如命名为 TARGET_REPO_PAT
+          # 然后在这里使用它：
+          # deploy_key: ${{ secrets.TARGET_REPO_PAT }} # 如果是部署到外部仓库，通常使用 deploy_key 或 personal_token
+          # personal_token: ${{ secrets.TARGET_REPO_PAT }} # 或者使用 personal_token
+          # 注意：actions-gh-pages v3 及更高版本推荐使用 GITHUB_TOKEN 进行同仓库部署。
+          # 对于外部仓库，您需要配置 deploy_key 或 personal_token。
+          # 由于您要部署到不同的仓库，您需要创建一个具有写权限的 Personal Access Token (PAT)
+          # 并将其添加到您当前仓库 (simple-admin-vben5-ui) 的 Secrets 中，例如命名为 TARGET_REPO_PAT
+          # 然后取消下面这行的注释并使用它
+          personal_token: ${{ secrets.TARGET_REPO_PAT }}
+          # 如果目标仓库是私有的，或者您想强制推送，可以添加以下选项
+          # force_orphan: true

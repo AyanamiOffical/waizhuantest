@@ -33,19 +33,14 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # 注释掉github_token行，因为推送到外部仓库时不使用它
+          # github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./apps/simple-admin-core/dist # Vite 构建的默认输出目录通常是 dist
           publish_branch: gh-pages # 部署到 gh-pages 分支
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
-          # 删除以下行
-          # external_repository: AyanamiOffical/waizhuantest.git
-          # personal_token: ${{ secrets.TARGET_REPO_PAT }}
-          # 注意：actions-gh-pages v3 及更高版本推荐使用 GITHUB_TOKEN 进行同仓库部署。
-          # 对于外部仓库，您需要配置 deploy_key 或 personal_token。
-          # 由于您要部署到不同的仓库，您需要创建一个具有写权限的 Personal Access Token (PAT)
-          # 并将其添加到您当前仓库 (simple-admin-vben5-ui) 的 Secrets 中，例如命名为 TARGET_REPO_PAT
-          # 然后取消下面这行的注释并使用它
+          # 添加外部仓库配置
+          external_repository: AyanamiOffical/waizhuantest.git
           personal_token: ${{ secrets.TARGET_REPO_PAT }}
           # 如果目标仓库是私有的，或者您想强制推送，可以添加以下选项
           # force_orphan: true

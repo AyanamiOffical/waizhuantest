@@ -40,7 +40,7 @@ jobs:
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
           # 添加外部仓库配置
-          external_repository: AyanamiOffical/waizhuantest.git
+          external_repository: AyanamiOffical/waizhuantest
           personal_token: ${{ secrets.TARGET_REPO_PAT }}
           # 如果目标仓库是私有的，或者您想强制推送，可以添加以下选项
           # force_orphan: true

@@ -1,0 +1,1 @@
+import{b1 as t}from"./bootstrap-_LeX4-bm.js";const l=e=>t.post("/fms-api/cloud_file_tag/list",e),s=e=>t.post("/fms-api/cloud_file_tag/create",e),o=e=>t.post("/fms-api/cloud_file_tag/update",e),i=e=>t.post("/fms-api/cloud_file_tag/delete",e);export{s as c,i as d,l as g,o as u};

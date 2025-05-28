@@ -38,13 +38,9 @@ jobs:
           publish_branch: gh-pages # 部署到 gh-pages 分支
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
-          # 如果您的目标仓库是 https://github.com/AyanamiOffical/waizhuantest.git
-          # 您需要设置 external_repository 选项
-          external_repository: AyanamiOffical/waizhuantest.git
-          # 您还需要一个 Personal Access Token (PAT) 具有 repo 权限，并将其存储在源仓库的 Secrets 中，例如命名为 TARGET_REPO_PAT
-          # 然后在这里使用它：
-          # deploy_key: ${{ secrets.TARGET_REPO_PAT }} # 如果是部署到外部仓库，通常使用 deploy_key 或 personal_token
-          # personal_token: ${{ secrets.TARGET_REPO_PAT }} # 或者使用 personal_token
+          # 删除以下行
+          # external_repository: AyanamiOffical/waizhuantest.git
+          # personal_token: ${{ secrets.TARGET_REPO_PAT }}
           # 注意：actions-gh-pages v3 及更高版本推荐使用 GITHUB_TOKEN 进行同仓库部署。
           # 对于外部仓库，您需要配置 deploy_key 或 personal_token。
           # 由于您要部署到不同的仓库，您需要创建一个具有写权限的 Personal Access Token (PAT)

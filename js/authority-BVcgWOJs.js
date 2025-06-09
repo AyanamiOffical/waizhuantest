@@ -1,1 +1,0 @@
-import{b1 as r}from"./bootstrap-_LeX4-bm.js";const s=t=>r.post("/sys-api/api/list",t),a=t=>r.post("/sys-api/authority/api/role",t),o=t=>r.post("/sys-api/authority/api/create_or_update",t),i=t=>r.post("/sys-api/authority/menu/create_or_update",t),p=t=>r.post("/sys-api/authority/menu/role",t);export{a,i as b,o as c,p as d,s as g};

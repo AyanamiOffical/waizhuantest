@@ -1,1 +1,0 @@
-import{b1 as r}from"./bootstrap-B-VSIAtm.js";const m=e=>r.post("/mms-api/member_rank/list",e),a=e=>r.post("/mms-api/member_rank/create",e),s=e=>r.post("/mms-api/member_rank/update",e),n=e=>r.post("/mms-api/member_rank/delete",e);export{a as c,n as d,m as g,s as u};

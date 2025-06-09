@@ -1,1 +1,0 @@
-import{b1 as s}from"./bootstrap-DXVvTFoS.js";const i=t=>s.post("/sys-api/position/list",t),e=t=>s.post("/sys-api/position/create",t),n=t=>s.post("/sys-api/position/update",t),p=t=>s.post("/sys-api/position/delete",t);export{e as c,p as d,i as g,n as u};

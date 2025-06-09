@@ -1,0 +1,1 @@
+import{b1 as t}from"./bootstrap-BWmjjFp9.js";function p(){return t.get("/sys-api/captcha")}function c(a){return t.post("/sys-api/captcha/email",a)}function e(a){return t.post("/sys-api/captcha/sms",a)}export{e as a,p as b,c as g};

@@ -1,1 +1,0 @@
-import{b1 as e}from"./bootstrap-DXVvTFoS.js";const s=t=>e.post("/mms-api/token/list",t),n=t=>e.post("/mms-api/token/delete",t),m=t=>e.post("/mms-api/token/logout",{id:t});export{n as d,s as g,m as l};

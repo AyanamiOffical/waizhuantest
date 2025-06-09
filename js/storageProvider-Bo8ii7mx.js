@@ -1,1 +1,0 @@
-import{b1 as e}from"./bootstrap-BWmjjFp9.js";const o=r=>e.post("/fms-api/storage_provider/list",r),s=r=>e.post("/fms-api/storage_provider/create",r),a=r=>e.post("/fms-api/storage_provider/update",r),i=r=>e.post("/fms-api/storage_provider/delete",r);export{s as c,i as d,o as g,a as u};

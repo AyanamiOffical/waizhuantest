@@ -1,0 +1,1 @@
+import{b1 as t}from"./bootstrap-C83mKH3e.js";const o=e=>t.post("/sys-api/role/list",e),r=e=>t.post("/sys-api/role/create",e),a=e=>t.post("/sys-api/role/update",e),l=e=>t.post("/sys-api/role/delete",e);export{r as c,l as d,o as g,a as u};

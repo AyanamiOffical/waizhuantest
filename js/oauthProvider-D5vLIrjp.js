@@ -1,0 +1,1 @@
+import{b1 as o}from"./bootstrap-C83mKH3e.js";const r=t=>o.post("/sys-api/oauth_provider/list",t),s=t=>o.post("/sys-api/oauth_provider/create",t),e=t=>o.post("/sys-api/oauth_provider/update",t),i=t=>o.post("/sys-api/oauth_provider/delete",t),u=t=>o.post("/sys-api/oauth/login",t),p=t=>o.get("/sys-api/oauth/login/callback"+t);export{p as a,s as c,i as d,r as g,u as o,e as u};

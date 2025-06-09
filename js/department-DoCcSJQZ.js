@@ -1,0 +1,1 @@
+import{b1 as e}from"./bootstrap-C83mKH3e.js";const r=t=>e.post("/sys-api/department/list",t),a=t=>e.post("/sys-api/department/create",t),p=t=>e.post("/sys-api/department/update",t),n=t=>e.post("/sys-api/department/delete",t);export{a as c,n as d,r as g,p as u};

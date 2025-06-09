@@ -1,1 +1,0 @@
-import{b1 as e}from"./bootstrap-C83mKH3e.js";const s=t=>e.post("/fms-api/file_tag/list",t),r=t=>e.post("/fms-api/file_tag/create",t),i=t=>e.post("/fms-api/file_tag/update",t),p=t=>e.post("/fms-api/file_tag/delete",t);export{r as c,p as d,s as g,i as u};

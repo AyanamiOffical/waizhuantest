@@ -1,0 +1,1 @@
+import{b1 as s}from"./bootstrap-B-VSIAtm.js";const o=t=>s.post("/sys-api/token/list",t),n=t=>s.post("/sys-api/token/update",t),p=t=>s.post("/sys-api/token/delete",t),a=t=>s.post("/sys-api/token/logout",{id:t});export{p as d,o as g,a as l,n as u};
